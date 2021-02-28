@@ -1,11 +1,22 @@
 import * as React from 'react';
 import { View, Text, Image, StyleSheet } from 'react-native';
 import { Input } from 'react-native-elements';
-import { Button } from 'react-native-elements';
-
+import { Card, ListItem, Button, Icon } from 'react-native-elements'
 function bookRides({ navigation }) {
   return (
     <View >
+      <Card containerStyle={styles.containerStyle1}>
+        <Card.Title>Pricing</Card.Title>
+        <Card.Divider />
+
+        <Text style={{ marginBottom: 10,textAlign: "center" }}>
+          Enjoy your ride for the best price!!
+         
+        </Text>
+        <Text style={styles.priceText }>1{'\u00A3'}<Text style={{ fontSize: 20 }}>/30 min</Text></Text>
+
+
+      </Card>
       <View style={styles.inputLine}>
         <Input
           placeholder='Enter Bike Code'
@@ -29,6 +40,15 @@ function bookRides({ navigation }) {
 }
 
 const styles = StyleSheet.create({
+  priceText:{
+    fontSize:40,
+    fontWeight: "bold",
+    textAlign: "center"
+  },
+  containerStyle1: {
+
+  },
+
   buttonLayout: {
     marginBottom: 100,
     width: "85%",
@@ -36,8 +56,6 @@ const styles = StyleSheet.create({
 
   },
   buttonstyle1: {
-
-
     paddingTop: 10,
     paddingBottom: 10,
     backgroundColor: '#eb5a5a'
