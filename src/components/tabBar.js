@@ -28,8 +28,8 @@ function tabBar(props) {
                         iconName = focused ? 'settings' : 'settings-outline';
 
                     }
-                    else if (route.name == 'old-Rides') {
-                        iconName = focused ? 'timer' : 'timer-outline';
+                    else if (route.name == 'Report-Ride') {
+                        iconName = focused ? 'construct' : 'construct-outline';
                     }
                     else if (route.name == 'Home') {
                         iconName = focused ? 'home' : 'home-outline';
@@ -46,7 +46,7 @@ function tabBar(props) {
         >
             <Tab.Screen name="Home"  children={()=><HomeAd user_Id={props.user_Id}/> }/>
             <Tab.Screen name="Book-Ride" children={()=><Bookride user_Id={props.user_Id}/> }  />
-            <Tab.Screen name="old-Rides" children={()=><OldRides user_Id={props.user_Id}/> }/>
+            <Tab.Screen name="Report-Ride" children={()=><OldRides user_Id={props.user_Id}/> }/>
             <Tab.Screen name="Settings" children={()=><Settings user_Id={props.user_Id}/> }  />
         </Tab.Navigator>
 

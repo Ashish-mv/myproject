@@ -2,24 +2,23 @@
 import React, { useState, useEffect } from 'react'
 import { View, Text, Image, StyleSheet } from 'react-native';
 import { Avatar, Button, Card, Title, Paragraph } from 'react-native-paper';
+import axios from 'axios';
+
 const LeftContent = props => <Avatar.Icon {...props} icon="folder" />
 function homeAd( props) {
   // const { user_Id } = route.params;
   // console.log(user_Id)
   // {JSON.stringify(user_Id)}
+  const  [ userName, setUserName ] = useState(0)
 // useEffect(()=>{
 //   axios.get(
-//     "http://192.168.56.1:5000/user_id",{
-//       params:{username:userName}
-//     })
+//     "http://192.168.56.1:5000/user_name?userId="+props.user_Id)
 //     .then(function (response) {
 //       if (response.status == 200) {
       
-//       console.log("response2", response.data.user_id[0]);
+//      console.log("name"+respone.data)
 //       // console.log("user-id set-"+userId)
-//       navigation.push('userHome',{
-//         user_Id:response.data.user_id[0]
-//       })
+      
 //     }
 //     })
 
@@ -36,7 +35,8 @@ function homeAd( props) {
 //             alert("Bad Request!!");
 //           }
 //           else {
-//             alert("Sorry!,Couldn't reach our server!!")
+//             console.log("name test"+resp.respone.data)
+//             // setUserName()
 
 //           }
 //         });
@@ -44,7 +44,7 @@ function homeAd( props) {
   
   return (
     <View >
-      <Text style={styles.welcomeMsg}>Hi {props.user_Id} </Text>
+      <Text style={styles.welcomeMsg}>Hello </Text>
       
       <Card containerStyle={styles.CardStyle} wrapperStyle={styles.noBorder}>
 

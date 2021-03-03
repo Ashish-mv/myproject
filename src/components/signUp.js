@@ -134,6 +134,7 @@ function signUp({ navigation }) {
                     <View style={styles.inputLine}>
                         <Input
                             placeholder='Enter your Password'
+                            secureTextEntry={true}
                             leftIcon={{ type: 'font-awesome', name: 'key' }}
                             onChangeText={value => setPassword(value)}
                         />

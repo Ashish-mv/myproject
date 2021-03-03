@@ -90,9 +90,9 @@ function signInAndUp({ navigation }) {
         <View style={{ flex: 8 }}>
           <Text style={styles.title}>Sign In</Text>
           <Text style={styles.welcomeMsg}>Hi there!!Nice to see you again</Text>
-          <Text style={styles.inputPlaceHolder}>Email</Text>
+          <Text style={styles.inputPlaceHolder}>UserName</Text>
           <View style={styles.inputLine}><Input
-            placeholder='Enter your mail-id'
+            placeholder='Enter your UserName'
             leftIcon={{ type: 'font-awesome', name: 'envelope-o' }}
             onChangeText={value => setUserName(value)}
           /></View>
@@ -101,6 +101,7 @@ function signInAndUp({ navigation }) {
           <View style={styles.inputLine}><Input
             placeholder='Enter your Password'
             leftIcon={{ type: 'font-awesome', name: 'key' }}
+            secureTextEntry={true}
             onChangeText={value => setPassword(value)}
           /></View>
         </View>
