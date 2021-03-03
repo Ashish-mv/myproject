@@ -2,17 +2,17 @@ import * as React from 'react';
 import { View, Text, Button, Image, StyleSheet } from 'react-native';
 
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import oldRides from './oldRides'
-import bookride from './bookRide'
-import settings from './settings'
+import OldRides from './oldRides'
+import Bookride from './bookRide'
+import Settings from './settings'
 import Icon from 'react-native-vector-icons/FontAwesome';
 import Ionicons from 'react-native-vector-icons/Ionicons';
-import homeAd from './homeAd'
+import HomeAd from './homeAd'
 
 
 
 const Tab = createBottomTabNavigator()
-function tabBar({ navigation }) {
+function tabBar(props) {
 
     return (
         <Tab.Navigator
@@ -44,10 +44,10 @@ function tabBar({ navigation }) {
                 inactiveTintColor: 'gray',
             }}
         >
-            <Tab.Screen name="Home" component={homeAd} />
-            <Tab.Screen name="Book-Ride" component={bookride} />
-            <Tab.Screen name="old-Rides" component={oldRides} />
-            <Tab.Screen name="Settings" component={settings} />
+            <Tab.Screen name="Home"  children={()=><HomeAd user_Id={props.user_Id}/> }/>
+            <Tab.Screen name="Book-Ride" children={()=><Bookride user_Id={props.user_Id}/> }  />
+            <Tab.Screen name="old-Rides" children={()=><OldRides user_Id={props.user_Id}/> }/>
+            <Tab.Screen name="Settings" children={()=><Settings user_Id={props.user_Id}/> }  />
         </Tab.Navigator>
 
 

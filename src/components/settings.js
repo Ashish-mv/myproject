@@ -5,7 +5,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { Card, ListItem, Button, Icon } from 'react-native-elements'
 
 
-function settings({ navigation }) {
+function settings( props) {
   return (
     <View style={{
       flex: 1,
@@ -19,7 +19,7 @@ function settings({ navigation }) {
           raised
           backgroundColor="green"
           buttonStyle={styles.buttonstyle1}
-          onPress={() => navigation.push('signInAndUp')}
+          // onPress={() => navigation.push('signInAndUp')}
         />
 
       </View>

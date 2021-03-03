@@ -12,10 +12,12 @@ import TabBar from './tabBar'
 
 
 const Tab = createBottomTabNavigator()
-function userHome({ navigation }) {
-  
+function userHome({ route,navigation }) {
+  const { user_Id } = route.params;
+  // const [userId, setUserId] = useState(user_d)
+  console.log("welcome1"+user_Id)
   return (
-    <TabBar/>
+    <TabBar user_Id={route.params.user_Id}/>
        
 
 

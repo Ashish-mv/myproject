@@ -9,6 +9,7 @@ import BookRide from './src/components/bookRide'
 import OldRides from './src/components/oldRides'
 import Settings from './src/components/settings'
 import HomeAd from './src/components/homeAd'
+import BikeBooked from './src/components/bikeBooked'
 
 const Stack = createStackNavigator();
 
@@ -24,7 +25,7 @@ function App() {
           headerTitleStyle: {
             fontWeight: 'bold',
           },
-        }} initialRouteName="HomeAd">
+        }} initialRouteName="signInAndUp">
         <Stack.Screen
           name="userHome"
           component={UserHome}
@@ -80,6 +81,14 @@ function App() {
           component={HomeAd}
           options={{
             title: 'Login-Page'
+          }}
+
+        />
+        <Stack.Screen
+          name="bikeBooked"
+          component={BikeBooked}
+          options={{
+            title: 'Booking'
           }}
 
         />
